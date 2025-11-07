@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quiz World</title>
+  </head>
+  <body>
+    <div class="screen" id="startup-screen">
+      <div>
+        <h1 class="title">Quiz world</h1>
+        <div class="rules-container">
+          <p class="heading">Rules:</p>
+          <p><span>>></span> You will have only 10 seconds per question</p>
+          <p>
+            <span>>></span> Once you select your answer, it cannot be undone
+          </p>
+        </div>
+      </div>
+
+      <div class="startup-form">
+        <div class="select-container">
+          <label class="form-label">Category</label>
+          <button id="select-category-btn">Any category</button>
+          <div class="drop-down no-scrollbar" id="select-category-dd">
+            <button id="any-category-btn">Any category</button>
+          </div>
+        </div>
+
+        <div class="select-container">
+          <label class="form-label">Difficulty</label>
+          <button id="select-difficulty-btn">Any difficulty</button>
+          <div class="drop-down no-scrollbar" id="select-difficulty-dd">
+            <button id="any-difficulty-btn">Any difficulty</button>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+
+      <div>
+        <button class="primary-btn" id="start-btn">Start</button>
+      </div>
+    </div>
+
+    <div class="screen hide" id="quiz-screen">
+      <div>
+        <div class="question-header">
+          <span class="big-part">
+            Question
+            <span id="question-number"></span>
+          </span>
+          <span class="small-part">/<span id="question-total"></span></span>
+        </div>
+
+        <div class="question" id="question"></div>
+      </div>
+
+      <div class="option-container">
+        <button id="option-1" class="option">
+          <span class="text"></span>
+          <span class="marker">&#x2713;</span>
+        </button>
+
+        <button id="option-2" class="option">
+          <span class="text"></span>
+          <span class="marker">&#x2713;</span>
+        </button>
+
+        <button id="option-3" class="option">
+          <span class="text"></span>
+          <span class="marker">&#x2713;</span>
+        </button>
+
+        <button id="option-4" class="option">
+          <span class="text"></span>
+          <span class="marker">&#x2713;</span>
+        </button>
+      </div>
+
+      <div>
+        <button class="primary-btn" disabled id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <div class="screen hide" id="score-screen">
+      <div>
+        <h1 class="title">Quiz world</h1>
+      </div>
+
+      <div class="score-container">
+        <div class="score-box">
+          <p class="text">Your score:</p>
+          <p class="score" id="score">5/10</p>
+        </div>
+      </div>
+
+      <div>
+        <button class="primary-btn" id="restart-btn">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="js/quizzes.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
